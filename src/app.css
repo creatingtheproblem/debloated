@@ -1,0 +1,34 @@
+:root {
+  --bg-main: #0a0a0a;       
+  --bg-card: #171717;       
+  --border: #333333;        
+  
+  --text-main: #ededed;     
+  --text-muted: #888888;   
+  --accent: #ffffff;        
+  --danger: #ef4444;
+
+  --font-body: system-ui, -apple-system, sans-serif;
+  --nav-height: 60px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input {
+  font-family: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}

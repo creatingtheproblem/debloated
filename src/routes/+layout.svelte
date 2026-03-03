@@ -2,11 +2,18 @@
     import '../app.css';
     import { page } from '$app/state';
     import { icons } from '$lib/icons.js';
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/debloated/sw.js');
+        }
+    });
 
     const navItems = [
-        { href: '/',         label: 'Lift', paths: icons.barbell   },
-        { href: '/history',  label: 'Logs', paths: icons.lineChart },
-        { href: '/settings', label: 'Edit', paths: icons.sliders   },
+        { href: '/',        label: 'Log',     paths: icons.barbell   },
+        { href: '/history', label: 'History', paths: icons.lineChart },
+        { href: '/splits',  label: 'Splits',  paths: icons.sliders   },
     ];
 </script>
 

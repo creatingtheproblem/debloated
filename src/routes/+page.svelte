@@ -2,8 +2,6 @@
     import { onMount } from 'svelte';
     import { db } from '$lib/db.js';
 
-    import { base } from '$app/paths';
-
     let loading     = $state(true);
     let splits      = $state([]);
     let activeSplit = $state(null);
@@ -124,7 +122,7 @@
 {:else if splits.length === 0}
     <div class="locked">
         <p class="locked-msg">No splits set up yet.</p>
-        <p class="locked-sub">Head to the <a href="{base}/splits">Splits</a> tab to create your first split.</p>
+        <p class="locked-sub">Head to the <a href="/splits">Splits</a> tab to create your first split.</p>
     </div>
 
 {:else}

@@ -2,9 +2,9 @@ const CACHE = 'debloated-v1';
 
 // App shell assets to cache on install
 const PRECACHE = [
-    '/debloated/',
-    '/debloated/history',
-    '/debloated/splits',
+    '/',
+    '/history',
+    '/splits',
 ];
 
 self.addEventListener('install', (e) => {

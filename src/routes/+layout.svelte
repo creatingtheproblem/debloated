@@ -2,6 +2,7 @@
     import '../app.css';
     import { page } from '$app/state';
     import { icons } from '$lib/icons.js';
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
 
     onMount(() => {
@@ -11,9 +12,9 @@
     });
 
     const navItems = [
-        { href: '/',        label: 'Log',     paths: icons.barbell   },
-        { href: '/history', label: 'History', paths: icons.lineChart },
-        { href: '/splits',  label: 'Splits',  paths: icons.sliders   },
+        { href: base + '/',        label: 'Log',     paths: icons.barbell   },
+        { href: base + '/history', label: 'History', paths: icons.lineChart },
+        { href: base + '/splits',  label: 'Splits',  paths: icons.sliders   },
     ];
 </script>
 
